@@ -1,15 +1,18 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static '/gazebo/css/styles.css' %}">
+{% endblock %}
 
 {% block content %}
-<div class="landing-container" style="background-image: url('/static/path_to_your_background_image.jpg'); text-align: center; padding: 5%;">
+<div class="landing-container">
 
     <h1>Welcome to Gazebo!</h1>
 
-    <p>Your one-stop solution for course registrations.</p>
+    <h2>Watch, Notify, Enroll</h2>
 
-    <div>
-        <a href="{% url 'login' %}" class="btn btn-primary">Log In</a>
-        <a href="{% url 'register' %}" class="btn btn-secondary">Register</a>
-    </div>
+    {% block inner_content %}
+    {% endblock %}
 </div>
 {% endblock %}

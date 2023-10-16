@@ -22,5 +22,5 @@ def register(request):
 # need view function to redirect to course listing (/courses) or dashboard view instead of /accounts/profile
 
 def landing(request):
-    return render(request, 'landing.html')
+    return render(request, 'registration/login_and_register.html')
 
